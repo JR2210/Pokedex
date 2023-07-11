@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Controladores.ControladorPrincipal">
+   <right>
+      <TableView fx:id="tabla" prefHeight="365.0" prefWidth="202.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="nombreEntrenador" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="apodoEntrenador" prefWidth="75.0" text="Apodo" />
+          <TableColumn fx:id="entrenadorId" prefWidth="49.0" text="id" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </right>
+   <bottom>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#anadirPokemon" text="Alta Pokemon" />
+            <Button mnemonicParsing="false" onAction="#modificarPokemon" text="Modificar Pokemon" />
+            <Button mnemonicParsing="false" onAction="#eliminarPokemon" text="Eliminar Pokemon" />
+            <Button mnemonicParsing="false" onAction="#anadirEntrenador" text="Alta Entrenador" />
+            <Button mnemonicParsing="false" onAction="#eliminarEntrenador" text="Baja Entrenador" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <left>
+      <TableView fx:id="tablaPokemon" prefHeight="370.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="pokemonId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nombrePokemon" prefWidth="135.0" text="Nombre Pokemon" />
+          <TableColumn fx:id="tipo" prefWidth="102.0" text="Tipo" />
+            <TableColumn fx:id="pokemonEntrenadorId" prefWidth="87.0" text="EntrenadorId" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </left>
+</BorderPane>
